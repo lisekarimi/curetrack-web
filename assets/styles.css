@@ -1450,6 +1450,112 @@ p {
     font-size: 1.05rem;
 }
 
+/* Explore More Projects Section */
+.explore-projects {
+    padding: 40px 0;
+    background: #f8f9fa;
+    position: relative;
+}
+
+.explore-projects::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="explore-pattern" width="50" height="50" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23667eea" opacity="0.05"/><circle cx="75" cy="75" r="0.5" fill="%23764ba2" opacity="0.03"/></pattern></defs><rect width="100" height="100" fill="url(%23explore-pattern)"/></svg>');
+    opacity: 0.4;
+}
+
+.explore-projects .container {
+    position: relative;
+    z-index: 1;
+}
+
+.projects-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.project-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+    border: 1px solid rgba(102, 126, 234, 0.1);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover::before {
+    transform: scaleX(1);
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+}
+
+.project-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+    transition: all 0.3s ease;
+}
+
+.project-card:hover .project-icon {
+    transform: scale(1.1);
+    box-shadow: 0 12px 32px rgba(102, 126, 234, 0.4);
+}
+
+.project-icon i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.project-card h3 {
+    color: #2d3748;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.project-card p {
+    color: #4a5568;
+    line-height: 1.6;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-card .btn {
+    margin-top: 1rem;
+}
+
 /* CTA Section */
 .cta {
     padding: 80px 0;
@@ -1710,6 +1816,20 @@ p {
 
     .stat-card {
         padding: 1.5rem;
+    }
+
+    .project-card {
+        padding: 2rem;
+        margin: 0 1rem;
+    }
+
+    .project-icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    .project-icon i {
+        font-size: 1.75rem;
     }
 }
 
